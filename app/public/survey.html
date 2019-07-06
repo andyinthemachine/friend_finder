@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 style="margin: 20px"> Survey Questions</h2>
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>About You</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" role="form">
+
+                            <div class="form-group">
+                                <label for="name">Name (Required)</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="photo">Link to Photo (Required)</label>
+                                <input type="link" class="form-control" id="photo">
+                            </div>
+                            <br>
+                            <h5><strong>Question 1</strong></h5>
+                            <h6>You enjoy puns.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_1">
+                                    <a class="dropdown-item" id="question1_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question1_2">2</a>
+                                    <a class="dropdown-item" id="question1_2">3</a>
+                                    <a class="dropdown-item" id="question1_2">4</a>
+                                    <a class="dropdown-item" id="question1_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 2</strong></h5>
+                            <h6>You sleep alot.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_2">
+                                    <a class="dropdown-item" id="question2_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question2_2">2</a>
+                                    <a class="dropdown-item" id="question2_2">3</a>
+                                    <a class="dropdown-item" id="question2_2">4</a>
+                                    <a class="dropdown-item" id="question2_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 3</strong></h5>
+                            <h6>You've got to make the good times last.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_3"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_3">
+                                    <a class="dropdown-item" id="question3_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question3_2">2</a>
+                                    <a class="dropdown-item" id="question3_2">3</a>
+                                    <a class="dropdown-item" id="question3_2">4</a>
+                                    <a class="dropdown-item" id="question3_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 4</strong></h5>
+                            <h6>Purple is a good color.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_4"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_4">
+                                    <a class="dropdown-item" id="question4_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question4_2">2</a>
+                                    <a class="dropdown-item" id="question4_2">3</a>
+                                    <a class="dropdown-item" id="question4_2">4</a>
+                                    <a class="dropdown-item" id="question4_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 5</strong></h5>
+                            <h6>There is no business like show business.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_5"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_5">
+                                    <a class="dropdown-item" id="question5_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question5_2">2</a>
+                                    <a class="dropdown-item" id="question5_2">3</a>
+                                    <a class="dropdown-item" id="question5_2">4</a>
+                                    <a class="dropdown-item" id="question5_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 6</strong></h5>
+                            <h6>It don't mean a thing if it ain't got that swing.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_6"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_6">
+                                    <a class="dropdown-item" id="question6_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question6_2">2</a>
+                                    <a class="dropdown-item" id="question6_2">3</a>
+                                    <a class="dropdown-item" id="question6_2">4</a>
+                                    <a class="dropdown-item" id="question6_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 7</strong></h5>
+                            <h6>It's not the heat - it's the humidity.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_7"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_7">
+                                    <a class="dropdown-item" id="question7_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question7_2">2</a>
+                                    <a class="dropdown-item" id="question7_2">3</a>
+                                    <a class="dropdown-item" id="question7_2">4</a>
+                                    <a class="dropdown-item" id="question7_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 8</strong></h5>
+                            <h6>You like the smell of napalm in the morning.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_8"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_8">
+                                    <a class="dropdown-item" id="question8_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question8_2">2</a>
+                                    <a class="dropdown-item" id="question8_2">3</a>
+                                    <a class="dropdown-item" id="question8_2">4</a>
+                                    <a class="dropdown-item" id="question8_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 9</strong></h5>
+                            <h6>It's always beer-thirty.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_9"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_9">
+                                    <a class="dropdown-item" id="question9_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question9_2">2</a>
+                                    <a class="dropdown-item" id="question9_2">3</a>
+                                    <a class="dropdown-item" id="question9_2">4</a>
+                                    <a class="dropdown-item" id="question9_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5><strong>Question 10</strong></h5>
+                            <h6>You whistle while you work.</h6>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="question_10"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select an Option
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="question_10">
+                                    <a class="dropdown-item" id="question10_1">1 (Strongly Disagree)</a>
+                                    <a class="dropdown-item" id="question10_2">2</a>
+                                    <a class="dropdown-item" id="question10_2">3</a>
+                                    <a class="dropdown-item" id="question10_2">4</a>
+                                    <a class="dropdown-item" id="question10_5">5 (Strongly Agree)</a>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="submit-btn"><span
+                                    class="fa fa-check"></span> Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+</body>
+
+</html>
