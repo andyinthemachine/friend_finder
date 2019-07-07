@@ -13,34 +13,6 @@
 
 
 
-<ul class="nav nav-pills left">
-    <li class="dropdown active span8">
-
-        <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
-            <i class="icon icon-envelope icon-white"></i>&nbsp;
-            <span id="dropdown_title">Select</span><span class="caret"></span></a>
-
-        <ul ID="divNewNotifications" class="dropdown-menu">
-            <li><a>One</a></li>
-            <li><a>Two</a></li>
-            <li><a>Three</a></li>
-        </ul>
-    </li>
-</ul>
-
-
-
-<script>
-    // $('.dropdown-toggle').dropdown();
-    $('#divNewNotifications li').on('click', function () {
-
-        $('#dropdown_title').html($(this).find('a').html());
-        console.log("click 6");
-
-    });
-
-</script>
-
 
 
 <body>
@@ -91,7 +63,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu">
+                                <div id="question_2_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question2_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question2_2">2</a>
                                     <a class="dropdown-item" id="question2_2">3</a>
@@ -107,7 +79,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_3">
+                                <div id="question_3_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question3_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question3_2">2</a>
                                     <a class="dropdown-item" id="question3_2">3</a>
@@ -123,7 +95,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_4">
+                                <div id="question_4_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question4_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question4_2">2</a>
                                     <a class="dropdown-item" id="question4_2">3</a>
@@ -139,7 +111,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_5">
+                                <div id="question_5_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question5_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question5_2">2</a>
                                     <a class="dropdown-item" id="question5_2">3</a>
@@ -155,7 +127,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_6">
+                                <div id="question_6_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question6_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question6_2">2</a>
                                     <a class="dropdown-item" id="question6_2">3</a>
@@ -171,7 +143,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_7">
+                                <div id="question_7_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question7_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question7_2">2</a>
                                     <a class="dropdown-item" id="question7_2">3</a>
@@ -187,7 +159,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_8">
+                                <div id="question_8_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question8_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question8_2">2</a>
                                     <a class="dropdown-item" id="question8_2">3</a>
@@ -203,7 +175,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_9">
+                                <div id="question_9_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question9_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question9_2">2</a>
                                     <a class="dropdown-item" id="question9_2">3</a>
@@ -219,7 +191,8 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_10">
+                                <div id="question_10_dropdown" class="dropdown-menu">
+                                    <!--aria-labelledby="question_10"> -->
                                     <a class="dropdown-item" id="question10_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question10_2">2</a>
                                     <a class="dropdown-item" id="question10_2">3</a>
@@ -246,11 +219,73 @@
 
     $("#question_1_dropdown").on('click', ".dropdown-item", function () {
         $('#question_1').html($(this).text());
-        console.log(this);
-        console.log($(this).text());
+    });
 
+    $("#question_2_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_2').html($(this).text());
+    });
+
+    $("#question_3_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_3').html($(this).text());
+    });
+
+    $("#question_4_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_4').html($(this).text());
+    });
+    
+    $("#question_5_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_5').html($(this).text());
+    });
+
+    $("#question_6_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_6').html($(this).text());
+    });
+
+    $("#question_7_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_7').html($(this).text());
+    });
+
+    $("#question_8_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_8').html($(this).text());
+    });
+
+    $("#question_9_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_9').html($(this).text());
+    });
+
+    $("#question_10_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_10').html($(this).text());
     });
 
 </script>
 
 </html>
+
+
+<!-- <ul class="nav nav-pills left">
+        <li class="dropdown active span8">
+    
+            <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
+                <i class="icon icon-envelope icon-white"></i>&nbsp;
+                <span id="dropdown_title">Select</span><span class="caret"></span></a>
+    
+            <ul ID="divNewNotifications" class="dropdown-menu">
+                <li><a>One</a></li>
+                <li><a>Two</a></li>
+                <li><a>Three</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    
+    
+    <script>
+        $('.dropdown-toggle').dropdown();
+        $('#divNewNotifications li').on('click', function () {
+    
+            $('#dropdown_title').html($(this).find('a').html());
+            console.log("click 6");
+    
+        });
+    
+    </script> -->
