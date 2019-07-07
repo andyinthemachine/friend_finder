@@ -6,11 +6,18 @@
     <title>Friend Finder Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-
 </head>
 
+<style>
+    h6 {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-weight: 700;
+        color: #4aaaa5;
+    }
+</style>
 
 <body>
 
@@ -217,6 +224,14 @@
         </div>
         <br>
     </div>
+
+    <!-- <div id="match_modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div> -->
+    
 </body>
 
 
@@ -248,7 +263,6 @@
         var new_photo = $("#photo").val().trim();
 
         if (found_all_10 && new_name && new_photo) {
-            alert("all questions answered");
             var new_friend = {
                 name: new_name,
                 photo: new_photo,
@@ -258,6 +272,7 @@
 
             $.post("/api/friends", new_friend)
                 .then(function (data) {
+                    alert("Match = " + data.name);
                     console.log("match:", data);
                 });
         }
