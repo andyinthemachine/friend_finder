@@ -198,7 +198,7 @@
                             </div>
                         </form>
                         <br>
-                        <div class="text-right">
+                        <div>
                             <button type="submit" class="btn btn-primary btn-md btn-block" id="submit-btn"><span
                                     class="fa fa-check"></span> Submit</button>
                         </div>
@@ -227,35 +227,46 @@
         $(`#question_${$(this).attr("data-question")}`).html($(this).text());
     });
 
+    $("#submit-btn").on("click", function (event) {
+        event.preventDefault();
+
+        // check to see if all questions answered
+
+        var new_scores = [];
+        var found_all_10 = true;
+        var i = 0;
+
+
+        while (i++ < 10 && found_all_10) {
+            var answer = parseInt(($(`#question_${i}`).text().charAt(0)));
+            if (isNaN(answer))
+                found_all_10 = false;
+            else
+                new_scores.push(answer);
+
+        }
+
+        var new_name = $("#name").val().trim();
+        var new_photo = $("#photo").val().trim();
+
+        if (found_all_10 && new_name && new_photo) {
+            alert("all questions answered");
+            var new_friend = {
+                name: new_name,
+                photo: new_photo,
+                scores: new_scores
+            };
+            console.log(new_friend);
+
+            // $.post("/api/friends", new_friend)
+            //     .then(function (data) {
+            //         console.log("match:", data);
+            //     });
+        }
+        else
+            alert("All questions not answered");
+    });
+
 </script>
 
 </html>
-
-
-<!-- <ul class="nav nav-pills left">
-        <li class="dropdown active span8">
-    
-            <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
-                <i class="icon icon-envelope icon-white"></i>&nbsp;
-                <span id="dropdown_title">Select</span><span class="caret"></span></a>
-    
-            <ul ID="divNewNotifications" class="dropdown-menu">
-                <li><a>One</a></li>
-                <li><a>Two</a></li>
-                <li><a>Three</a></li>
-            </ul>
-        </li>
-    </ul>
-    
-    
-    
-    <script>
-        $('.dropdown-toggle').dropdown();
-        $('#divNewNotifications li').on('click', function () {
-    
-            $('#dropdown_title').html($(this).find('a').html());
-            console.log("click 6");
-    
-        });
-    
-    </script> -->
