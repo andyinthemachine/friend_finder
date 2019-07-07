@@ -11,6 +11,38 @@
 
 </head>
 
+
+
+<ul class="nav nav-pills left">
+    <li class="dropdown active span8">
+
+        <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
+            <i class="icon icon-envelope icon-white"></i>&nbsp;
+            <span id="dropdown_title">Select</span><span class="caret"></span></a>
+
+        <ul ID="divNewNotifications" class="dropdown-menu">
+            <li><a>One</a></li>
+            <li><a>Two</a></li>
+            <li><a>Three</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<script>
+    // $('.dropdown-toggle').dropdown();
+    $('#divNewNotifications li').on('click', function () {
+
+        $('#dropdown_title').html($(this).find('a').html());
+        console.log("click 6");
+
+    });
+
+</script>
+
+
+
 <body>
 
     <div class="container">
@@ -43,7 +75,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_1">
+                                <div id="question_1_dropdown" class="dropdown-menu">
                                     <a class="dropdown-item" id="question1_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question1_2">2</a>
                                     <a class="dropdown-item" id="question1_2">3</a>
@@ -59,7 +91,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select an Option
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="question_2">
+                                <div class="dropdown-menu">
                                     <a class="dropdown-item" id="question2_1">1 (Strongly Disagree)</a>
                                     <a class="dropdown-item" id="question2_2">2</a>
                                     <a class="dropdown-item" id="question2_2">3</a>
@@ -205,7 +237,20 @@
                 </div>
 
             </div>
-
+        </div>
+    </div>
 </body>
+
+
+<script>
+
+    $("#question_1_dropdown").on('click', ".dropdown-item", function () {
+        $('#question_1').html($(this).text());
+        console.log(this);
+        console.log($(this).text());
+
+    });
+
+</script>
 
 </html>
