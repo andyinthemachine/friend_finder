@@ -34,11 +34,16 @@ app.get('*',function (req, res) {
 });
 
 app.post("/api/friends", function (req, res) {
-    var data = req.body;
+    // JSON post sent from the user
+    var new_entry = req.body;
+    new_entry.routeName = new_entry.name.replace(/\s+/g, "").toLowerCase();
 
-    console.log(data);
-    res.json(data);
+    friends_list.push(new_entry);
+
+    console.log(new_entry);
+    res.json(new_entry);
 });
+
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);

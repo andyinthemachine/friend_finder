@@ -231,15 +231,13 @@
         event.preventDefault();
 
         // check to see if all questions answered
-
         var new_scores = [];
         var found_all_10 = true;
         var i = 0;
 
-
         while (i++ < 10 && found_all_10) {
-            var answer = parseInt(($(`#question_${i}`).text().charAt(0)));
-            if (isNaN(answer))
+            var answer = ($(`#question_${i}`).text().charAt(0));
+            if (isNaN(parseInt(answer)))
                 found_all_10 = false;
             else
                 new_scores.push(answer);
@@ -256,12 +254,12 @@
                 photo: new_photo,
                 scores: new_scores
             };
-            console.log(new_friend);
+            console.log("1", new_friend);
 
-            // $.post("/api/friends", new_friend)
-            //     .then(function (data) {
-            //         console.log("match:", data);
-            //     });
+            $.post("/api/friends", new_friend)
+                .then(function (data) {
+                    console.log("match:", data);
+                });
         }
         else
             alert("All questions not answered");
