@@ -17,11 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 function diff(person1, person2) {
-
     var total_diff = 0;
     for (var j = 0; j < 10; j++)
         total_diff += Math.abs(parseInt(person1.scores[j]) - parseInt(person2.scores[j]));
-
     return (total_diff);
 }
 
@@ -35,15 +33,9 @@ function closest_match(new_entry) {
             low_diff = cur_diff;
             match_index = i;
         }
-
-        console.log("i = ", i);
-        console.log("cur_diff = ", cur_diff);
-        console.log("low_diff = ", low_diff);
     }
     return (match_index);
 }
-
-
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/app/public/home.html"));
