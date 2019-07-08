@@ -4,20 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder Survey</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
 </head>
 
-<style>
-    h6 {
-        font-family: Georgia, Times, "Times New Roman", serif;
-        font-weight: 700;
-        color: #4aaaa5;
-    }
-</style>
 
 <body>
 
@@ -236,7 +232,6 @@
 
 
 <script>
-
     // get dropdown choice text and load into parent button 
     $(".dropdown-menu").on('click', ".dropdown-item", function () {
         $(`#question_${$(this).attr("data-question")}`).html($(this).text());
