@@ -7,10 +7,18 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css"> -->
+
+
+    <style>
+        h6 {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-weight: 700;
+            color: #4aaaa5;
+        }
+    </style>
 
 </head>
 
@@ -221,13 +229,23 @@
         <br>
     </div>
 
-    <!-- <div id="match_modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+    <div id="match-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span id="match-message"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="match-image" class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-    </div> -->
-    
+    </div>
+
 </body>
 
 
@@ -238,6 +256,7 @@
     });
 
     $("#submit-btn").on("click", function (event) {
+
         event.preventDefault();
 
         // check to see if all questions answered
@@ -267,8 +286,10 @@
 
             $.post("/api/friends", new_friend)
                 .then(function (data) {
-                    alert("Match = " + data.name);
-                    console.log("match:", data);
+                    var friend_image = $(`<img src="${data.photo}" alt="no image found" width="400">`);
+                    $('#match-image').html(friend_image);
+                    $('#match-message').text("Your best match is: " + data.name);
+                    $('#match-modal').modal('show');
                 });
         }
         else

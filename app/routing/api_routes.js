@@ -7,6 +7,8 @@ var friends_list = require("../data/friends.js");
 
 module.exports = function (app) {
 
+
+
     function diff(person1, person2) {
         var total_diff = 0;
         for (var j = 0; j < 10; j++)
