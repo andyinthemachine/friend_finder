@@ -10,26 +10,26 @@ var friends = [
         "scores": ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
     },
     {
-        "route_name": "bill2",
-        "name": "Bill 2",
+        "route_name": "pat2",
+        "name": "Pat 2",
         "photo": "https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         "scores": ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2']
     },
     {
-        "route_name": "bill3",
-        "name": "Bill 3",
+        "route_name": "Chris3",
+        "name": "Chris 3",
         "photo": "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         "scores": ['3', '3', '3', '3', '3', '3', '3', '3', '3', '3']
     },
     {
-        "route_name": "bill4",
-        "name": "Bill 4",
+        "route_name": "Alex4",
+        "name": "Alex 4",
         "photo": "https://images.pexels.com/photos/1082962/pexels-photo-1082962.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         "scores": ['4', '4', '4', '4', '4', '4', '4', '4', '4', '4']
     },
     {
-        "route_name": "bill5",
-        "name": "Bill 5",
+        "route_name": "Ashley5",
+        "name": "Ashley 5",
         "photo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         "scores": ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5']
     }
